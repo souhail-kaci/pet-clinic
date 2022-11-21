@@ -2,7 +2,7 @@
     <parent>
         <artifactId>pet-clinic</artifactId>
         <groupId>fr.souhail</groupId>
-        <version>0.0.2-SNAPSHOT</version>
+        <version>0.0.2</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
