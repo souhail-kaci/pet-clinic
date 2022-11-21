@@ -1,7 +1,5 @@
 package fr.souhail.petclinic.model;
 
-
-
 public class Personne {
 
     private String firstname;
