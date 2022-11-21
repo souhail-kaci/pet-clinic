@@ -8,7 +8,7 @@
     </parent>
     <groupId>fr.souhail</groupId>
     <artifactId>pet-clinic</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>pet-clinic</name>
     <description>pet-clinic</description>
     <modelVersion>4.0.0</modelVersion>
@@ -25,7 +25,7 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:souhail-kaci/pet-clinic.git</developerConnection>
-      <tag>pet-clinic-0.0.2</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <build>
