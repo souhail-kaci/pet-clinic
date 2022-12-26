@@ -1,8 +1,10 @@
 package fr.souhail.petclinic.services.map;
 
 import fr.souhail.petclinic.model.Pet;
+import org.springframework.stereotype.Service;
 
-public class PetServiceMap extends CrudMapService<Pet, Long> {
+@Service
+public class PetServiceMap extends CrudAbstractMapService<Pet, Long> {
 
     @Override
     public Pet save(Pet object) {
