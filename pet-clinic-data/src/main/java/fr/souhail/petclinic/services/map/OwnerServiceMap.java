@@ -12,7 +12,7 @@ public class OwnerServiceMap extends CrudAbstractMapService<Owner, Long> impleme
 
     @Override
     public Owner save(Owner object) {
-        return super.save(object.getId(), object);
+        return super.map.put(object.getId(),object);
     }
 
     @Override
