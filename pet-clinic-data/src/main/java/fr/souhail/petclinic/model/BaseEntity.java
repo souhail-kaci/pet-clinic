@@ -1,6 +1,5 @@
 package fr.souhail.petclinic.model;
 
-import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 
 public class BaseEntity implements Serializable {
