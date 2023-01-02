@@ -4,8 +4,6 @@ import fr.souhail.petclinic.model.Owner;
 import fr.souhail.petclinic.model.Vet;
 import fr.souhail.petclinic.services.OwnerService;
 import fr.souhail.petclinic.services.VetService;
-import fr.souhail.petclinic.services.map.OwnerServiceMap;
-import fr.souhail.petclinic.services.map.VetServiceMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

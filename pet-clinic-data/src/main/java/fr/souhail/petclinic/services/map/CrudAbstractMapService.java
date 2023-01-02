@@ -1,15 +1,13 @@
 package fr.souhail.petclinic.services.map;
 
+import fr.souhail.petclinic.model.BaseEntity;
 import fr.souhail.petclinic.services.CrudService;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
-public abstract class CrudAbstractMapService<T, ID> implements CrudService<T, ID> {
+public abstract class CrudAbstractMapService<T extends BaseEntity, ID extends Long> implements CrudService<T, ID> {
 
-    protected Map<ID, T> map = new HashMap<>();
+    protected Map<Long, T> map = new HashMap<>();
 
     @Override
     public Set<T> findAll() {
@@ -23,7 +21,19 @@ public abstract class CrudAbstractMapService<T, ID> implements CrudService<T, ID
 
     @Override
     public T save(T object) {
-        return null;
+        if (object == null) {
+            throw new RuntimeException("Object cannot be null");
+        }
+
+        if (object.getId() == null) {
+            object.setId(this.getId());
+        }
+
+        this.map.put(object.getId(), object);
+
+        return object;
+
+
     }
 
     @Override
@@ -37,9 +47,13 @@ public abstract class CrudAbstractMapService<T, ID> implements CrudService<T, ID
 
     }
 
-    protected T save(ID id, T object) {
-        map.put(id, object);
-        return object;
+    private Long getId() {
+        try {
+            return Collections.max(this.map.keySet()) + 1;
+        } catch (Exception ex) {
+            return 1L;
+        }
     }
+
 
 }
