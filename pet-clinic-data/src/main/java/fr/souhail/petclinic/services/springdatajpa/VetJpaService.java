@@ -9,12 +9,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Profile("jpa")
-public class VetJpaService
-        extends CrudAbstractJpaService<Vet, Long, VetRepository>
-        implements VetService {
-
-    @Autowired
-    public VetJpaService(VetRepository repository) {
-        super(repository);
-    }
+public class VetJpaService{
+////        extends CrudAbstractJpaService<Vet, Long, VetRepository>
+////        implements VetService {
+//
+//    @Autowired
+//    public VetJpaService(VetRepository repository) {
+//        super(repository);
+//    }
 }
