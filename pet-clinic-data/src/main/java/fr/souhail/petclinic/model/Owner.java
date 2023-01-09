@@ -1,5 +1,7 @@
 package fr.souhail.petclinic.model;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Set;
 
 public class Owner extends Personne {
@@ -34,6 +36,9 @@ public class Owner extends Personne {
     }
 
     public Set<Pet> getPets() {
+        if(pets == null){
+            return new HashSet<>();
+        }
         return pets;
     }
 
